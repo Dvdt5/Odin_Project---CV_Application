@@ -6,7 +6,7 @@ export default function Header() {
     <>
     <div id="header">
         <h1>CV Maker</h1>
-        <button id="inspectBtn" type="button"><i className="fa fa-search"></i></button>
+        <button id="inspectBtn" type="button"><i className="fa fa-eye"></i></button>
     </div>
 
     </>
