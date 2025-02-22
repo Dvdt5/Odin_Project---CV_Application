@@ -1,17 +1,16 @@
+import "./GeneralInfo.css"
 import { useState } from "react";
-import "./InputSection.css";
 
-
-export default function InputSection() {
+function GeneralInfo(){
     const [generalInfo, setGeneralInfo] = useState({
         name: "",
         email: "",
         phone: "",
     });
-    return(
-    <>
-    <div id="inputSection">
-        <div id="generalInformation">
+
+    return (
+        <>
+        <div id="generalInformation" className="inputSection">
             <h2 className="informationHeader">General Information</h2>
             <hr />
             <div className="inputRow">
@@ -45,8 +44,9 @@ export default function InputSection() {
                 />
             </div>
         </div>
-    </div>
 
-    </>
+        </>
     )
 }
+
+export default GeneralInfo

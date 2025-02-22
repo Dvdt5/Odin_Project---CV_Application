@@ -1,13 +1,16 @@
 import { useState } from 'react'
 import Header from './components/Header/Header'
-import InputSection from './components/InputSection/InputSection'
+import GeneralInfo from './components/GeneralInfo/GeneralInfo'
 
 function App() {
+  
 
   return (
     <>
       <Header />
-      <InputSection />
+      <>
+      <GeneralInfo/>
+      </>
     </>
   )
 }
