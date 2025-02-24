@@ -15,6 +15,7 @@
     border-radius: 50%;
     font-size: 30px;
     cursor: pointer;
+    color: antiquewhite;
 
     border: 0;
     background-color: transparent;
@@ -22,6 +23,7 @@
 }
 #inspectBtn:hover {
     background-color: rgb(255, 255, 255);
+    color: black;
 }
 #inspectBtn:active {
     color: #ff5858;
