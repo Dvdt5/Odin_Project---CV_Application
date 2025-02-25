@@ -1,0 +1,29 @@
+
+
+#educationInputSection {
+    position: relative;
+}
+
+
+
+#addEducationBtn {
+    position: absolute;
+    top: 10px;
+
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-size: 30px;
+    cursor: pointer;
+
+    border: 0;
+    background-color: transparent;
+    transition: background-color 0.2s ease-in 0s;
+}
+#addEducationBtn:hover {
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+#addEducationBtn:active {
+    color: #ff5858;
+}
