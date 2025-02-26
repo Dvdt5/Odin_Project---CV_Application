@@ -2,10 +2,15 @@ import { useState } from "react"
 import "./Education.css"
 
 
-function EducationalInfo ({educationObject, EducationInfo, setEducationInfo}) {
+function EducationalInfo ({educationObject, educationInfo, setEducationInfo, index}) {
     
     const [info, setinfo] = useState(educationObject);
-    
+
+    const removeEducation = () => {
+        let dupArr = [...educationInfo];
+        dupArr.splice(index, 1);
+        setEducationInfo(dupArr);
+      };
 
     return (
     <>
@@ -49,6 +54,14 @@ function EducationalInfo ({educationObject, EducationInfo, setEducationInfo}) {
                 value={info.dateOfStudyEnd}
                 onChange={(event) => setinfo({ ...info, dateOfStudyEnd: event.target.value })}
             />
+            </div>
+            <div className="inputRow">
+                <button
+                type="button"
+                onClick={removeEducation}
+                >
+                Delete Education
+                </button>
             </div>
         </div>
         <hr />

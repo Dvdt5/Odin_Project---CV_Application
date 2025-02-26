@@ -28,6 +28,7 @@ function EducationalExperience () {
       setEducationInfo(newArray);
 
     }
+    console.log(educationInfo)
 
     return (
     <>
@@ -44,6 +45,7 @@ function EducationalExperience () {
               return (
                 <EducationalInfo
                 key={education.id}
+                index={index}
                 educationObject={education}
                 educationInfo={educationInfo}
                 setEducationInfo={setEducationInfo}
