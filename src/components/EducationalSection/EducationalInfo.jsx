@@ -58,6 +58,7 @@ function EducationalInfo ({educationObject, educationInfo, setEducationInfo, ind
             <div className="inputRow">
                 <button
                 type="button"
+                className="deleteEducationBtn"
                 onClick={removeEducation}
                 >
                 Delete Education

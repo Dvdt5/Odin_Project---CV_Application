@@ -39,7 +39,7 @@ function EducationalExperience () {
           <i className="fa fa-plus"></i>
           </button>
         {educationInfo.length === 0 ? (
-            <p>click plus to add a segment</p>
+            <p id="noEducationText">Click plus to add an education</p>
           ) : (
             educationInfo.map((education, index) => {
               return (
