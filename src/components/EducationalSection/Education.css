@@ -39,6 +39,7 @@
     cursor: pointer;
     padding: 8px;
     color: white;
+    font-weight: bold;
 
     border: 0;
     background-color: transparent;
@@ -50,4 +51,21 @@
 }
 .deleteEducationBtn:active {
     color: #ff5858;
+}
+
+.flex{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex .inputRow {
+    width: 300px;
+}
+
+.whiteTextBold {
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
 }

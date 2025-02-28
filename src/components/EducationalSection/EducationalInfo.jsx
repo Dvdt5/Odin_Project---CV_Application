@@ -10,8 +10,7 @@ function EducationalInfo ({educationObject, educationInfo, setEducationInfo, ind
         let dupArr = [...educationInfo];
         dupArr.splice(index, 1);
         setEducationInfo(dupArr);
-      };
-
+    };
     return (
     <>
         <div className="educationBox">
@@ -35,25 +34,28 @@ function EducationalInfo ({educationObject, educationInfo, setEducationInfo, ind
                 onChange={(event) => setinfo({ ...info, titleOfStudy: event.target.value })}
             />
             </div>
+            <div className="flex">
             <div className="inputRow">
-            <input 
-                name="studyStartDate"
-                className="inputText"
-                placeholder="Start Date"
-                type="text"
-                value={info.dateOfStudyStart}
-                onChange={(event) => setinfo({ ...info, dateOfStudyStart: event.target.value })}
-            />
+                <input 
+                    name="studyStartDate"
+                    className="inputText"
+                    placeholder="Start Date"
+                    type="date"
+                    value={info.dateOfStudyStart}
+                    onChange={(event) => setinfo({ ...info, dateOfStudyStart: event.target.value })}
+                />
             </div>
+            <div><p className="whiteTextBold">To</p></div>
             <div className="inputRow">
-            <input 
-                name="studyEndDate"
-                className="inputText"
-                placeholder="End Date"
-                type="text"
-                value={info.dateOfStudyEnd}
-                onChange={(event) => setinfo({ ...info, dateOfStudyEnd: event.target.value })}
-            />
+                <input 
+                    name="studyEndDate"
+                    className="inputText"
+                    placeholder="End Date"
+                    type="date"
+                    value={info.dateOfStudyEnd}
+                    onChange={(event) => setinfo({ ...info, dateOfStudyEnd: event.target.value })}
+                />
+            </div>
             </div>
             <div className="inputRow">
                 <button
