@@ -1,0 +1,71 @@
+
+
+#workInputSection {
+    position: relative;
+}
+
+#noWorkText {
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#addWorkBtn {
+    position: absolute;
+    top: 10px;
+
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-size: 30px;
+    cursor: pointer;
+
+    border: 0;
+    background-color: transparent;
+    transition: background-color 0.2s ease-in 0s;
+}
+#addWorkBtn:hover {
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+#addWorkBtn:active {
+    color: #ff5858;
+}
+
+.deleteWorkBtn {
+    border-radius: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 8px;
+    color: white;
+    font-weight: bold;
+
+    border: 0;
+    background-color: transparent;
+    transition: background-color 0.2s ease-in 0s;
+}
+.deleteWorkBtn:hover {
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+.deleteWorkBtn:active {
+    color: #ff5858;
+}
+
+.flex{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex .inputRow {
+    width: 300px;
+}
+
+.whiteTextBold {
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+}

@@ -28,7 +28,6 @@ function EducationalExperience () {
       setEducationInfo(newArray);
 
     }
-    console.log(educationInfo)
 
     return (
     <>
