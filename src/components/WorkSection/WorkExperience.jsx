@@ -4,16 +4,8 @@ import "./Work.css"
 
 
 
-function WorkExperience () {
+function WorkExperience ({workInfo, setWorkInfo}) {
     
-    const [workInfo, setWorkInfo] = useState([{
-        id: crypto.randomUUID(),
-        companyName: "",
-        positionTitle: "",
-        mainResponsibilities: "",
-        dateOfWorkStart: "",
-        dateOfWorkEnd: ""
-    }]);
     
     function AddWork(){
       const newArray = [...workInfo];

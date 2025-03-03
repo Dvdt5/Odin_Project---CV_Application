@@ -4,7 +4,20 @@ import "./Education.css"
 
 function EducationalInfo ({educationObject, educationInfo, setEducationInfo, index}) {
     
-    const [info, setinfo] = useState(educationObject);
+    const [info, setInfo] = useState(educationObject);
+    
+    const handleSetInfo = (e) => {
+    const val = e.target.value;
+    const key = e.target.name;
+    setInfo({
+      ...info,
+      [key]: val,
+    });
+
+    let dupEducation = [...educationInfo];
+    dupEducation[index][key] = val;
+    setEducationInfo(dupEducation);
+    };
 
     const removeEducation = () => {
         let dupArr = [...educationInfo];
@@ -16,12 +29,12 @@ function EducationalInfo ({educationObject, educationInfo, setEducationInfo, ind
         <div className="educationBox">
             <div className="inputRow">
             <input 
-                name="nameOfSchool"
+                name="schoolName"
                 className="inputText"
                 placeholder="School Name Here"
                 type="text"
                 value={info.schoolName}
-                onChange={(event) => setinfo({ ...info, schoolName: event.target.value })}
+                onChange={handleSetInfo}
             />
             </div>
             <div className="inputRow">
@@ -31,29 +44,29 @@ function EducationalInfo ({educationObject, educationInfo, setEducationInfo, ind
                 placeholder="Title of Study"
                 type="text"
                 value={info.titleOfStudy}
-                onChange={(event) => setinfo({ ...info, titleOfStudy: event.target.value })}
+                onChange={handleSetInfo}
             />
             </div>
             <div className="flex">
             <div className="inputRow">
                 <input 
-                    name="studyStartDate"
+                    name="dateOfStudyStart"
                     className="inputText"
                     placeholder="Start Date"
                     type="date"
                     value={info.dateOfStudyStart}
-                    onChange={(event) => setinfo({ ...info, dateOfStudyStart: event.target.value })}
+                    onChange={handleSetInfo}
                 />
             </div>
             <div><p className="whiteTextBold">To</p></div>
             <div className="inputRow">
                 <input 
-                    name="studyEndDate"
+                    name="dateOfStudyEnd"
                     className="inputText"
                     placeholder="End Date"
                     type="date"
                     value={info.dateOfStudyEnd}
-                    onChange={(event) => setinfo({ ...info, dateOfStudyEnd: event.target.value })}
+                    onChange={handleSetInfo}
                 />
             </div>
             </div>

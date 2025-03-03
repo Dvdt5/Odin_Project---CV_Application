@@ -4,7 +4,20 @@ import "./Work.css"
 
 function WorkInfo ({workObject, workInfo, setWorkInfo, index}) {
     
-    const [info, setinfo] = useState(workObject);
+    const [info, setInfo] = useState(workObject);
+
+    const handleSetInfo = (e) => {
+        const val = e.target.value;
+        const key = e.target.name;
+        setInfo({
+          ...info,
+          [key]: val,
+        });
+    
+        let dupWork = [...workInfo];
+        dupWork[index][key] = val;
+        setWorkInfo(dupWork);
+    };
 
     const removeWork = () => {
         let dupArr = [...workInfo];
@@ -16,22 +29,22 @@ function WorkInfo ({workObject, workInfo, setWorkInfo, index}) {
         <div className="workBox">
             <div className="inputRow">
             <input 
-                name="nameOfCompany"
+                name="companyName"
                 className="inputText"
                 placeholder="Company Name Here"
                 type="text"
                 value={info.companyName}
-                onChange={(event) => setinfo({ ...info, companyName: event.target.value })}
+                onChange={handleSetInfo}
             />
             </div>
             <div className="inputRow">
             <input 
-                name="titleOfPosition"
+                name="positionTitle"
                 className="inputText"
                 placeholder="Title of Position Here"
                 type="text"
                 value={info.positionTitle}
-                onChange={(event) => setinfo({ ...info, positionTitle: event.target.value })}
+                onChange={handleSetInfo}
             />
             </div>
             <div className="inputRow">
@@ -41,29 +54,29 @@ function WorkInfo ({workObject, workInfo, setWorkInfo, index}) {
                 placeholder="Main Responsibilites"
                 type="text"
                 value={info.mainResponsibilities}
-                onChange={(event) => setinfo({ ...info, mainResponsibilities: event.target.value })}
+                onChange={handleSetInfo}
             />
             </div>
             <div className="flex">
             <div className="inputRow">
                 <input 
-                    name="studyStartDate"
+                    name="dateOfWorkStart"
                     className="inputText"
                     placeholder="Start Date"
                     type="date"
                     value={info.dateOfWorkStart}
-                    onChange={(event) => setinfo({ ...info, dateOfWorkStart: event.target.value })}
+                    onChange={handleSetInfo}
                 />
             </div>
             <div><p className="whiteTextBold">To</p></div>
             <div className="inputRow">
                 <input 
-                    name="studyEndDate"
+                    name="dateOfWOrkEnd"
                     className="inputText"
                     placeholder="End Date"
                     type="date"
                     value={info.dateOfWOrkEnd}
-                    onChange={(event) => setinfo({ ...info, dateOfWorkEnd: event.target.value })}
+                    onChange={handleSetInfo}
                 />
             </div>
             </div>

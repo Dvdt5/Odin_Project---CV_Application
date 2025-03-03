@@ -4,15 +4,9 @@ import EducationalInfo from "./EducationalInfo";
 
 
 
-function EducationalExperience () {
+function EducationalExperience ({educationInfo, setEducationInfo}) {
     
-    const [educationInfo, setEducationInfo] = useState([{
-        id: crypto.randomUUID(),
-        schoolName: "",
-        titleOfStudy: "",
-        dateOfStudyStart: "",
-        dateOfStudyEnd: ""
-    }]);
+    
     
     function AddEducation(){
       const newArray = [...educationInfo];

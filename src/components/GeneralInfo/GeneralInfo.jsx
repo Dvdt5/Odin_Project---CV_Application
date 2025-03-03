@@ -1,12 +1,8 @@
 import "./GeneralInfo.css"
 import { useState } from "react";
 
-function GeneralInfo(){
-    const [generalInfo, setGeneralInfo] = useState({
-        name: "",
-        email: "",
-        phone: "",
-    });
+function GeneralInfo({generalInfo, setGeneralInfo}){
+    
 
     return (
         <>

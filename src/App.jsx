@@ -5,16 +5,55 @@ import EducationalExperience from './components/EducationalSection/EducationalEx
 import WorkExperience from './components/WorkSection/WorkExperience'
 
 function App() {
-  
+  const [isInputPage, setIsInputPage] = useState(true);
+
+  const [generalInfo, setGeneralInfo] = useState({
+    name: "",
+    email: "",
+    phone: "",
+  });
+
+  const [educationInfo, setEducationInfo] = useState([{
+    id: crypto.randomUUID(),
+    schoolName: "",
+    titleOfStudy: "",
+    dateOfStudyStart: "",
+    dateOfStudyEnd: ""
+  }]);
+
+  const [workInfo, setWorkInfo] = useState([{
+    id: crypto.randomUUID(),
+    companyName: "",
+    positionTitle: "",
+    mainResponsibilities: "",
+    dateOfWorkStart: "",
+    dateOfWorkEnd: ""
+  }]);
 
   return (
     <>
-      <Header />
-      <>
-      <GeneralInfo/>
-      <EducationalExperience />
-      <WorkExperience />
-      </>
+      <Header
+      isInputPage={isInputPage}
+      setIsInputPage={setIsInputPage}
+      />
+      {isInputPage ?
+      (<>
+        <GeneralInfo
+        generalInfo={generalInfo}
+        setGeneralInfo={setGeneralInfo}
+        />
+        <EducationalExperience
+        educationInfo={educationInfo}
+        setEducationInfo={setEducationInfo}
+        />
+        <WorkExperience
+        workInfo={workInfo}
+        setWorkInfo={setWorkInfo}
+        />
+        </>)
+      :
+      (<div>hello</div>)}
+      
     </>
   )
 }
