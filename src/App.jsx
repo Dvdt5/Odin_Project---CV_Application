@@ -3,6 +3,7 @@ import Header from './components/Header/Header'
 import GeneralInfo from './components/GeneralInfo/GeneralInfo'
 import EducationalExperience from './components/EducationalSection/EducationalExperience'
 import WorkExperience from './components/WorkSection/WorkExperience'
+import CvSheet from './components/CVSheet/CvSheet'
 
 function App() {
   const [isInputPage, setIsInputPage] = useState(true);
@@ -52,7 +53,12 @@ function App() {
         />
         </>)
       :
-      (<div>hello</div>)}
+      (<CvSheet
+      generalInfo={generalInfo}
+      educationInfo={educationInfo}
+      workInfo={workInfo}
+        />
+      )}
       
     </>
   )

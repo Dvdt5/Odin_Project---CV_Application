@@ -1,0 +1,35 @@
+
+
+
+#cvSheet {
+    background-color: white;
+    margin: 10vh auto;
+    width: 700px;
+    height: 100vh;
+    padding: 30px;
+    font-size: 1.2rem;
+}
+
+#cvHead {
+    text-align: center;
+}
+
+#cvContact {
+    display: flex;
+    justify-content: center;
+    gap: 36px;
+}
+
+
+.cvHr {
+    border-color: black;
+    margin: 0 auto;
+    box-shadow: none;
+}
+
+.cvHrLong {
+    border-color: black;
+    margin: 0 auto;
+    box-shadow: none;
+    width: 100%;
+}

@@ -24,7 +24,7 @@ function GeneralInfo({generalInfo, setGeneralInfo}){
                 id="email"
                 className="inputText"
                 placeholder="Your Email Here"
-                type="text"
+                type="email"
                 value={generalInfo.email}
                 onChange={(event) => setGeneralInfo({ ...generalInfo, email: event.target.value })}
                 />
@@ -35,6 +35,7 @@ function GeneralInfo({generalInfo, setGeneralInfo}){
                 className="inputText"
                 placeholder="Your Phone Here"
                 type="text"
+                maxLength={10}
                 value={generalInfo.phone}
                 onChange={(event) => setGeneralInfo({ ...generalInfo, phone: event.target.value })}
                 />
