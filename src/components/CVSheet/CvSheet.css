@@ -7,7 +7,7 @@
     width: 700px;
     height: 100vh;
     padding: 30px;
-    font-size: 1.2rem;
+    font-size: 0.8rem;
 }
 
 #cvHead {
@@ -20,6 +20,12 @@
     gap: 36px;
 }
 
+#cvEducation {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 1;
+    padding-top: 24px;
+}
 
 .cvHr {
     border-color: black;
@@ -27,9 +33,27 @@
     box-shadow: none;
 }
 
+.hrStriped {
+    border-color: black;
+    border-style: dashed;
+    margin: 0 auto;
+    box-shadow: none;
+    width: 80%;
+}
+
 .cvHrLong {
     border-color: black;
     margin: 0 auto;
     box-shadow: none;
     width: 100%;
+}
+
+.cvEducationItem {
+    font-size: 1rem;
+    margin: 0;
+}
+
+.cvDate {
+    font-weight: 500;
+    font-size: 0.7rem;
 }

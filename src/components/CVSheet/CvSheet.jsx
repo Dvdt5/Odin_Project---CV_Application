@@ -15,8 +15,28 @@ function CvSheet({generalInfo, workInfo, educationInfo}){
                 <p><strong>Phone:</strong> {generalInfo.phone}</p>
                 <p><strong>Email:</strong> {generalInfo.email}</p>
             </div>
-            <hr className="cvHrLong"/>
 
+        </div>
+            <hr className="cvHrLong"/>
+        <div id="cvEducation">
+            <div>
+            <h2>Education</h2>
+            </div>
+            <div>
+            {educationInfo.map((education)=>{
+            return (
+            <>
+            
+            <div className="cvEducationItem">
+                <p>{education.titleOfStudy}: &nbsp;  <span className="cvDate">{education.dateOfStudyStart} --- {education.dateOfStudyEnd}</span></p>
+                <p><strong>{education.schoolName}</strong></p>
+                <p></p>
+                <p></p>
+            </div>
+            <hr className="hrStriped"/>
+            </>
+            )})}
+            </div>
         </div>
         </div>
         </>
