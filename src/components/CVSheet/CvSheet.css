@@ -5,7 +5,7 @@
     background-color: white;
     margin: 10vh auto;
     width: 700px;
-    height: 100vh;
+    min-height: 100vh;
     padding: 30px;
     font-size: 0.8rem;
 }
@@ -20,12 +20,13 @@
     gap: 36px;
 }
 
-#cvEducation {
+#cvEducation, #cvWork {
     display: grid;
     grid-template-columns: auto auto;
     grid-template-rows: 1;
     padding-top: 24px;
 }
+
 
 .cvHr {
     border-color: black;
